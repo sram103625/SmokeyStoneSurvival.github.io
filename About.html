@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="StyleAbout.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Smokey Stone Survival</h1>
+        <h3>About</h3>
+        <nav class="nav-tabs"> 
+            <a href="Index.html" class="tab-link">Home</a>
+            <a href="About.html" class="tab-link">About</a>
+            <a href="Contact.html" class="tab-link">Contact</a>
+            <a href="Meet.html" class="tab-link">Meet the Instructors</a>
+            <a href="Classes.html" class="tab-link">Classes</a>
+        </nav>
+    </header>
+    <main>
+        <div class="expectations">
+            <h2><strong>What to Expect</strong></h2>
+          
+        <div class="expectations-card">
+            <h3><strong>Safety First</strong></h3>
+            <p>Every class is conducted in a safe and controlled setting.
+                Safety is the backbone of Smokey Stone Survival. </p>
+        </div>
+         <div class="expectations-card">
+            <h3><strong>Fun</strong></h3>
+            <p>Smokey Stone Survival makes learning outdoor skills an exciting and adventurous experience. </p>
+        </div>
+         <div class="expectations-card">
+            <h3><strong>Engaging</strong></h3>
+            <p>Every student is encouraged to participate and engage with the material in a meaningful way.</p>
+        </div>
+
+    </div>
+
+
+        <div class="about-slider">
+
+            <h2><strong>Our Approach to Outdoor Education</strong></h2>
+
+    <div class="card">
+        <h2><strong>Safety First</strong></h2>
+        <p>
+           Safety is the foundation of everything we do.
+
+All activities are taught in a controlled environment with age-appropriate instruction,
+ clear safety procedures, and close supervision. Before students participate in any skill,
+  they are taught the proper safety practices, equipment use, and environmental 
+  responsibility associated with that activity.
+
+Our goal is not simply to teach survival skills—it is to teach sound judgment, risk
+ awareness, and respect for the outdoors. Students learn how to make safe decisions,
+  work as a team, and understand their surroundings before progressing to more advanced
+   skills.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2><strong>Why We Started</strong></h2>
+        <p>
+           This program was created because we saw a growing need for opportunities that help children
+ develop practical skills, confidence, and a connection to the natural world.
+
+Many young people today have few opportunities to learn hands-on outdoor skills
+ or experience the satisfaction that comes from solving problems independently.
+  We wanted to create a place where children could challenge themselves, learn from
+   experienced instructors, and discover what they are capable of accomplishing.
+
+The skills we teach are valuable, but the lessons behind them are even more important.
+ Our students learn perseverance when a task is difficult, responsibility when handling
+  tools and equipment, and confidence when they successfully overcome challenges.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2><strong>Our Mission</strong></h2>
+        <p>
+            Our mission is to provide a safe, engaging, and educational outdoor experience that helps
+ young people develop confidence, practical skills, leadership, and a lifelong appreciation for nature.
+
+We believe that every child benefits from learning how to think critically, adapt to challenges,
+ and feel at home in the outdoors. Through guided instruction and hands-on experience, we strive
+  to prepare the next generation to be capable, confident, and responsible individuals.
+        </p>
+    </div>
+
+    <div class="card active">
+        <h2><strong>About Us</strong></h2>
+        <p>
+            In a world where children spend more time indoors and connected to screens than ever before,
+ we believe there is tremendous value in helping young people reconnect with nature, build confidence,
+  and develop practical life skills.
+
+Our weekly survival skills program is designed for children ages 8-16,
+ and provides a safe, structured environment where students can learn outdoor
+  skills while developing responsibility, resilience, teamwork, and self-reliance.
+
+Through hands-on activities such as fire craft, wild food identification and 
+foraging, shelter building, water filtration and distillation, navigation, and
+ outdoor safety, students gain real-world experience that encourages curiosity,
+  problem-solving, and confidence.
+        </p>
+    </div>
+
+    <div class="controls">
+        <button id="prev"><</button>
+        <button id="next">></button>
+    </div>
+
+</div>
+
+ <div class="expectations">
+            <h2><strong>What to Expect</strong></h2>
+          
+        <div class="expectations-card">
+            <h3><strong>Clear Progression</strong></h3>
+            <p>Students progress through a structured curriculum that builds on previously learned skills.</p>
+        </div>
+         <div class="expectations-card">
+            <h3><strong>Team Building</strong></h3>
+            <p>Students work together in small groups to achieve common goals, fostering collaboration and communication skills.</p>
+        </div>
+         <div class="expectations-card">
+            <h3><strong>Trained Instructos</strong></h3>
+            <p>Evey instructor will be trained to carry classes based on our standard safety procedures.</p>
+        </div>
+
+    </div>
+
+    </main>
+    <footer>
+        <p>Book Now! Text: 262-751-0091 <br>
+           Email: smokeystonesurvival@gmail.com <br>
+           &copy; 2026 Samuel Ramirez
+        </p>
+    </footer>
+    <script>
+const cards = document.querySelectorAll('.card');
+let current = 0;
+
+function showCard(index) {
+    cards.forEach(card => card.classList.remove('active'));
+    cards[index].classList.add('active');
+}
+
+document.getElementById('next').addEventListener('click', () => {
+    current = (current + 1) % cards.length;
+    showCard(current);
+});
+
+document.getElementById('prev').addEventListener('click', () => {
+    current = (current - 1 + cards.length) % cards.length;
+    showCard(current);
+});
+</script>
+</body>
+</html>
