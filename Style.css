@@ -19,6 +19,7 @@ body {
         background-attachment: fixed; /* Freeze the background image in place */
         background-position: center;   /* Center the image */
         background-repeat: no-repeat;  /* Prevent tiling */
+        background-size: cover;
     }
 }
 main h1 {
