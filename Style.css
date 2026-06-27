@@ -10,15 +10,15 @@ body {
     color: white;
     background-color: black;
     background-attachment: fixed;
-
+    z-index: 1;
 }
 
 @media (max-width: 1000px){
-    body{
+   .background-image {
         background-image: url('Images/PhoneBackground.png');
-        background-attachment: fixed; /* Freeze the background image in place */
-        background-repeat: no-repeat;  /* Prevent tiling */
-        background-size: 100%;
+        background-attachment: fixed;
+        width: 100vw;
+        z-index: -1;
     }
 }
 main h1 {
